@@ -1,5 +1,5 @@
 const Hospital = require('../models/Hospital.js');
-const vacCenter = require('../models/VacCenter');
+const vacCenter = require('../models/VacCenter.js');
 
 exports.getHospitals = async(req,res,next) => {
     let query;
@@ -112,9 +112,8 @@ exports.deleteHospital = async(req,res,next) => {
 
 exports.getVacCenters = (req,res,next)=>{
     vacCenter.getAll((err,data)=>{
-        if(err){
+        if(err)
             res.status(500).send({message: err.message || "Some error occured while retrieving Vaccine Centers."});
-        }
         else res.send(data);
     });
 };

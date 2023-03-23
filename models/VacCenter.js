@@ -2,7 +2,7 @@ const sql = require("../config/vacCentersDB");
 
 // Constructor
 const VacCenter = function(vacCenter){
-    this.id = vacCenter.is;
+    this.id = vacCenter.id;
     this.name = vacCenter.name;
     this.tel = vacCenter.tel;
 };

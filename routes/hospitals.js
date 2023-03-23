@@ -15,7 +15,6 @@ router.route('/:id')
     .get(getHospital)
     .put(protect, authorize('admin'), updateHospital)
     .delete(protect, authorize('admin'), deleteHospital);
-router.route('/vacCenters')
-    .get(getVacCenters);
-    
+router.route('/vacCenters').get(getVacCenters);
+
 module.exports = router;
